@@ -19,6 +19,7 @@ var LAYER_PALETTES = {
 { val:  42.0, r: 130, g:   0, b:   0, a: 200 },
 { val:  45.0, r:  80, g:   0, b:   0, a: 200 }
 ],
+
 'sst': [
 { val: -15.0, r:   0, g:   0, b: 131, a: 200 },
 { val: -12.0, r:   0, g:   0, b: 255, a: 200 },
@@ -51,22 +52,17 @@ var LAYER_PALETTES = {
     { val: 1.0,   r: 1,   g: 254, b: 255, a: 100 }, // NCL Index 0
     { val: 5.0,   r: 16,  g: 239, b: 255, a: 150 }, // NCL Index 8
     { val: 10.0,  r: 32,  g: 223, b: 255, a: 180 }, // NCL Index 16
-    { val: 20.0,  r: 49,  g: 206, b: 255, a: 200 }, // NCL Index 24
-    
+    { val: 20.0,  r: 49,  g: 206, b: 255, a: 200 }, // NCL Index 24    
     { val: 30.0,  r: 65,  g: 190, b: 255, a: 200 }, // NCL Index 32
     { val: 50.0,  r: 85,  g: 170, b: 255, a: 200 }, // NCL Index 42
     { val: 75.0,  r: 105, g: 150, b: 255, a: 200 }, // NCL Index 52
-
     { val: 100.0, r: 127, g: 128, b: 255, a: 220 }, // NCL Index 63
     { val: 125.0, r: 149, g: 106, b: 255, a: 240 }, // NCL Index 74
     { val: 150.0, r: 172, g: 83,  b: 255, a: 240 }, // NCL Index 86
-
     { val: 175.0, r: 195, g: 60,  b: 255, a: 255 }, // NCL Index 97
     { val: 200.0, r: 215, g: 40,  b: 255, a: 255 }, // NCL Index 107
     { val: 225.0, r: 235, g: 20,  b: 255, a: 255 }, // NCL Index 117
     { val: 250.0, r: 255, g: 0,   b: 255, a: 255 } // NCL 
-    
-   
    // { val: 9999.0, r: 255, g: 0,  b: 255, a: 255 }  
 ], 
 
@@ -636,7 +632,7 @@ const 	layersConfig = [
 {    id: "ao13_surf__mcc"     , name : "ao13_surf__mcc"     ,label: "Mid-level cloud cover"    ,    category: "surface"  ,    icon: "",      group: L.layerGroup()},
 {    id: "ao13_surf__lcc"     , name : "ao13_surf__lcc"     ,label: "Low level cloud cover"    ,    category: "surface"  ,    icon: "",      group: L.layerGroup()},
 {    id: "ao13_surf__tcc"     , name : "ao13_surf__tcc"     ,label: "Tot level cloud cover"    ,    category: "surface"  ,    icon: "",      group: L.layerGroup()},
-{    id: "ao13_surf__sst"     , name : "ao13_surf__sst"     ,label: "Sea surface temperature"  ,    category: "surface"  ,    icon: "", group: L.layerGroup()},
+//{    id: "ao13_surf__sst"     , name : "ao13_surf__sst"     ,label: "Sea surface temperature"  ,    category: "surface"  ,    icon: "", group: L.layerGroup()},
 {    id: "ao13_surf__tsurf"   , name : "ao13_surf__tsurf"   ,label: "Surface temperature"      ,    category: "surface"  ,    icon: "", group: L.layerGroup()},
 {    id: "ao13_surf__tsoil"   , name : "ao13_surf__tsoil"   ,label: "Soil temperature"         ,    category: "surface"  ,    icon: "", group: L.layerGroup()},
 //{  id: "ao13_surf__cape"    , name : "ao13_surf__cape"    ,label: "Surface CAPE"             ,    category: "surface"  ,    icon: "",     group: L.layerGroup()},
@@ -645,15 +641,6 @@ const 	layersConfig = [
 //{    id: "ao13_surf__radsol"  , name : "ao13_surf__radsol"  ,label: "Surface net solar radiation"  ,category: "surface"  ,    icon: "",  group: L.layerGroup()},
 //{    id: "ao13_surf__radter"  , name : "ao13_surf__radter"  ,label: "Surface net thermal radiation",category: "surface"  ,    icon: "",  group: L.layerGroup()},
 //{    id: "ao13_surf__mslp"     , name : "ao13_surf__mslp"     ,label: "Mean sea level pressure"    ,  category: "surface"  ,    icon: "",  group: L.layerGroup()},
-//{  id: "ao13_surf__sst"     , name : "ao13_surf__sst"     ,label: "Sea surface temperature"  ,    category: "surface"  ,    icon: "", group: L.layerGroup()},
-{    id: "ao13_surf__tsurf"   , name : "ao13_surf__tsurf"   ,label: "Surface temperature"      ,    category: "surface"  ,    icon: "", group: L.layerGroup()},
-//{  id: "ao13_surf__tsoil"   , name : "ao13_surf__tsoil"   ,label: "Soil temperature"         ,    category: "surface"  ,    icon: "", group: L.layerGroup()},
-//{  id: "ao13_surf__cape"    , name : "ao13_surf__cape"    ,label: "Surface CAPE"             ,    category: "surface"  ,    icon: "",     group: L.layerGroup()},
-{    id: "ao13_surf__pblh"    , name : "ao13_surf__pblh"    ,label: "Height of boundary layer" ,    category: "surface"  ,    icon: "",     group: L.layerGroup()},
-//{  id: "ao13_surf__sfcgeo"  , name : "ao13_surf__sfcgeo"  ,label: "Surface geopotentiel"     ,    category: "surface"  ,    icon: "",  group: L.layerGroup()},
-//{  id: "ao13_surf__radsol"  , name : "ao13_surf__radsol"  ,label: "Surface net solar radiation"  ,category: "surface"  ,    icon: "",  group: L.layerGroup()},
-//{  id: "ao13_surf__radter"  , name : "ao13_surf__radter"  ,label: "Surface net thermal radiation",category: "surface"  ,    icon: "",  group: L.layerGroup()},
-{    id: "ao13_surf__mslp"     , name : "ao13_surf__mslp"     ,label: "Mean sea level pressure"    ,  category: "surface"  ,    icon: "",  group: L.layerGroup()},
 {    id: "ao13_surf__tp1h"   , name : "ao13_surf__tp1h"   ,label: "Hourly accumulated precipitation"   ,  category: "surface"  ,    icon: "",  group: L.layerGroup()},
 {    id: "ao13_surf__tpacc"  , name : "ao13_surf__tpacc"  ,label: "Cumulative precipitation"    ,  category: "surface"  ,    icon: "",  group: L.layerGroup()},
 
@@ -700,8 +687,8 @@ const 	layersConfig = [
 // Radar
 //{    id: "radar__acrr"         , name : "radar__acrr"      ,label: "Hourly accumulated RADAR rain (QPE)", category: "Radar"   ,     icon: "",     group: L.layerGroup()},
 //{    id: "radar__accum1h"      , name : "radar__accum1h"   ,label: "Cumulative RADAR rain (QPE)"        , category: "Radar"   ,     icon: "",     group: L.layerGroup()}
-{    id: "radar__acrr"         , name : "radar__acrr"      ,label: "Hourly accumulated RADAR rain (QPE)", category: "Radar"   ,     icon: "",     group: L.layerGroup()},
-{    id: "radar__accum1h"      , name : "radar__accum1h"   ,label: "Cumulative RADAR rain (QPE)"        , category: "Radar"   ,     icon: "",     group: L.layerGroup()}
+//{    id: "radar__acrr"         , name : "radar__acrr"      ,label: "Hourly accumulated RADAR rain (QPE)", category: "Radar"   ,     icon: "",     group: L.layerGroup()},
+//{    id: "radar__accum1h"      , name : "radar__accum1h"   ,label: "Cumulative RADAR rain (QPE)"        , category: "Radar"   ,     icon: "",     group: L.layerGroup()}
 ];
 
 // Side bar layers 
@@ -1483,8 +1470,6 @@ map.on('overlayadd', function(e) {
 
 
 // The coordinates and value of raster data on the popup
-//map.on('mousemove', (e) => {
-
 
 function  updatePopup(latlng)  {
     if (!currentGeoRaster || !currentRaster) {
@@ -1492,8 +1477,8 @@ function  updatePopup(latlng)  {
         return;
     }
     
-    const lat = latlng.lat - 0.1 ;    
-    const lon = latlng.lon ;    
+    const lon = latlng.lng ;
+    const lat = latlng.lat  - 0.1 ;    
     
     // Domain  Bounding box  
     const xmin = ll_xmin;
@@ -1502,13 +1487,8 @@ function  updatePopup(latlng)  {
     const ymax = ll_ymax;
     
     // Translate the geo coordinates to pixel coordinates
-    let x = Math.floor(((lon  - xmin) / (xmax - xmin)) * currentWidth);
-    let y = Math.floor(((ymax - lat ) / (ymax - ymin)) * currentHeight) ;
-    
-
-    
-    /*const x = Math.floor(((lon - xmin) / (xmax - xmin)) * currentWidth);
-    const y = Math.floor(((ymax - lat) / (ymax - ymin)) * currentHeight);*/
+    const x = Math.floor(((lon - xmin) / (xmax - xmin)) * currentWidth);
+    const y = Math.floor(((ymax - lat) / (ymax - ymin)) * currentHeight);
     
     let hasData = false;        
     if (x >= 0 && x < currentWidth && y >= 0 && y < currentHeight) {        
@@ -1560,8 +1540,13 @@ map.on("mousemove", (e) => {
 });
 
 
+// Update popup   
+// ALSO during the animation 
+map.on("mousemove", (e) => {
+    lastMouseLatLng = e.latlng;
+    updatePopup(e.latlng);
 
-
+});
 
 
 // The coordinates and value of raster data on the popup
@@ -1574,8 +1559,7 @@ map.on('onclick', (e) => {
     }
     
     const lon = e.latlng.lng ;
-    const lat = e.latlng.lat ; //+ 0.2 ;    
-    
+    const lat = e.latlng.lat -0.1 ; 
     // Domain  Bounding box  
     const xmin = ll_xmin;
     const ymin = ll_ymin;
@@ -1583,8 +1567,8 @@ map.on('onclick', (e) => {
     const ymax = ll_ymax;
     
     // Translate the geo coordinates to pixel coordinates
-    const x = Math.floor(((lon - xmin) / (xmax - xmin)) * currentWidth);
-    const y = Math.floor(((ymax - lat) / (ymax - ymin)) * currentHeight) -0.2 ;
+    const x = Math.floor(((lon - xmin) / (xmax - xmin)) * currentWidth)  ;
+    const y = Math.floor(((ymax - lat) / (ymax - ymin)) * currentHeight) ;
     
     let hasData = false;        
     if (x >= 0 && x < currentWidth && y >= 0 && y < currentHeight) {        
@@ -1626,11 +1610,6 @@ map.on('onclick', (e) => {
         map.removeLayer(pop_tooltip);
     }
 }); 
-
-
-
-
-
 
 // Moved to main.js  
 // The updateActiveRaster is called directly when the app starts 

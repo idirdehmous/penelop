@@ -70,8 +70,6 @@
 }
 
 /*   BUTTONS */
-<<<<<<< HEAD
-=======
 /*.time-btn{
     width:36px;
     height:36px;
@@ -98,7 +96,6 @@
     display:block;
 }*/
 
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
 /* Aligne button on the timeline */
 .timeline-buttons {
   display: flex;

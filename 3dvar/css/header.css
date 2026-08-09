@@ -18,34 +18,25 @@ font-size: 16px  ;
 }
 
 
-
-<<<<<<< HEAD
-
-=======
-/* 1. Taille globale de la sous-titre de l'application */
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
 .topbar-center .app-subtitle {
-    font-size: 18px;          /* Augmenté (était à ~11px/14px) */
-    font-weight: 600;         /* Rend le texte un peu plus épais et lisible */
-    letter-spacing: 0.5px;    /* Espace légèrement les lettres */
+    font-size: 18px;          
+    font-weight: 600;         
+    letter-spacing: 0.5px;    
 }
 
-/* 2. Taille de la date UTC actuelle */
 .topbar-date {
-    font-size: 16px;          /* Augmenté (était à 14px) */
+    font-size: 16px;         
     font-weight: 500;
 }
 
-/* 3. Taille du texte de statut GeoServer */
 #server-status-text {
-    font-size: 14px;          /* Augmenté (était à 12px) */
+    font-size: 14px;       
     font-weight: 500;
 }
 
-/* 4. Ajustement optionnel du point vert (pour suivre la taille du texte) */
 .status-dot {
-    width: 12px;              /* Légèrement plus grand (était à 8px) */
-    height: 12px;             /* Légèrement plus grand (était à 8px) */
+    width: 12px;             
+    height: 12px;           
     border-radius:50%;
     display:inline-block;
     margin-right:8px;
@@ -64,7 +55,7 @@ font-size: 16px  ;
 }
 
 .topbar-status {
-    margin-right: 80px; /* Ajustez cette valeur (ex: 60px, 100px) pour le pousser plus ou moins vers la gauche */
+    margin-right: 80px; 
 }
 
 #server-status-text {
