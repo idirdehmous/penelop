@@ -12,15 +12,6 @@ const  WCS_BASE_URL  = 'http://'+HOST+':8080/geoserver/wcs?' ;   // WCS
 const  WMS_BASE_URL  = "http://"+HOST+":8080/geoserver/wms?" ;   // WMS 
 const  CNAME = 'behra_surf__clst'; 
 
-// Path to wind   json file 
-<<<<<<< HEAD
 let COMMON_DATE=null  ; 	
 let  zoomIn=5  ; 
-=======
-//let  WIND_DATA_PATH="./behra/uv_json"  ;
-let COMMON_DATE=null  ; 	
-let  zoomIn=5  ; 
-// Geoserver workspaces 
-//let WORKSPACE_SURF  = "behra_surf"  ; 
-//let WORKSPACE_UPPER = "behra_upper"  ;
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
+
