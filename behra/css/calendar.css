@@ -14,7 +14,6 @@ width:330px;
 }
 
 #calendar-panel{
-<<<<<<< HEAD
     position:absolute  !Important;
     top:0px            !Important;
     right:0px          !Important;
@@ -24,16 +23,6 @@ width:330px;
     /*top: 210px;*/
     /*height: calc(20vh - 210px); */
     /*height:10vh  ; */
-=======
-    position:fixed  !Important;
-    top:0px;           !Important;
-    right:0px       !Important;
-    left: 82%;
-    width:  320px   !Important;
-    /*height: 110px   !Important;*/
-    top: 210px;
-    height: calc(20vh - 210px); 
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
     background:var(--bg-surface) !Important;
     z-index:2001 !Important;
     border-right: 1px solid var(--border) !Important;

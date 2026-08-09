@@ -2,26 +2,12 @@
     position: fixed;
     top   : var(--header-height);     /* Starts from the header bottom edge  (70px) */
     bottom: 0px ; /*var(--footer-height);  /* stops at footer top edge  (35px) */
-<<<<<<< HEAD
-    right: 8px;
-    width: 330px;   
-    right:0%;     
-=======
     right: 0px;
     width: 320px;        
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
     background-color: var(--bg-surface, #FFFFFF);
     z-index: 5000;
     box-sizing: border-box;
     padding-bottom: 0px;    /*  no padding from botom  */
-<<<<<<< HEAD
-    flex-direction: column;
-    overflow-y: auto !important;
-    overflow-x: hidden !important; 
-    scrollbar-width: thin;
-    pointer-events: auto;
-    align-items: center; 
-=======
     display: flex;
     flex-direction: column;
     overflow-y: auto !important;
@@ -29,7 +15,6 @@
     scrollbar-width: thin;
     pointer-events: auto;
     /*scrollbar-color : #BFBFBF  ; */
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
 }
 
 .sidebar::-webkit-scrollbar {
@@ -43,93 +28,62 @@
     border-radius: 10px;
 }
 
-.sidebar-header {
-<<<<<<< HEAD
-margin-top    : 15px  ; 
-margin-bottom : 5px  ; 
-font-size     : 16px  ; 
-}
-
-.panel-label {
-margin-top : 100px; 
-font-style : bold !Important ; 
-=======
-margin-top : 15px  ; 
-margin-bottom: 5px  ; 
-font-size  : 16px  ; 
-}
-
-.panel-label {
-margin-top : 15px  ; 
-font-style :bold !Important ; 
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
-}
 
 
 
 #display-panel{
-<<<<<<< HEAD
     position: absolute  ;
     display:flex;
-=======
-    display:absolute;
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
     flex-direction:column;
     flex:1;
+    width: 328px ;
+    margin-top : 80px; 
 }
 
+
+.panel-label {
+margin-top:20px;
+font-size :16px  ; 
+}
+
+
+
+
 #layers-container{
-<<<<<<< HEAD
-    flex:1;
-    min-height:0;
-    overflow-y:auto;
-    padding:5px;
-    overflow-y: auto !important;
-    overflow-x: auto;
-    scrollbar-width: thin;
-    pointer-events: auto !Important;
-   background-color: var(--bg-surface, #FFFFFF);
-   width: 95% ;
-   margin:0 auto ; 
-   /*background-color: #FFFF00  ; */
+   flex:1;
+   overflow-y: auto !important;
+   overflow-x: auto;
+   scrollbar-width: thin;
+   margin-top:0 auto ; 
+ /*  background-color: #FFFF00  ; */
    border-radius:5px;
-=======
-position:absolute;
-   top:250px;
+   position:absolute;
+   top:210px;
    width:95%;
    left:1%;
-   flex:1;
-    min-height:0;
-    overflow-y:auto;
-    padding:0px;
-    overflow-y: auto !important;
-    overflow-x: hidden;
-    scrollbar-width: thin;
-    pointer-events: auto !Important;
-    background-color: var(--bg-surface, #FFFFFF);
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
+   min-height:0;
+   overflow-y:auto;
+   padding:0px;
+   overflow-y: auto !important;
+   pointer-events: auto !Important;
+   background-color: var(--bg-surface, #FFFFFF);
+
 }
         
 #menu-container{
     height:100%;
-<<<<<<< HEAD
-=======
     width: 100%;
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
     overflow-y:auto;
     overscroll-behavior:auto;
     scrollbar-width: thin;
     pointer-events: auto;
-<<<<<<< HEAD
    /* background-color: #FF0000  ;*/
     width: 100%; 
     box-sizing: border-box;
     border-radius:10px;
+    margin-top: 5px;
 
-     
-     
-=======
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
+    
 }
 #menu-container::-webkit-scrollbar {
     width: 10px;
@@ -326,25 +280,25 @@ background : #E5E5E5   ;
 }
 
 
-/* Opacity slider  */
+
+/*Opacity slider */  
 .opacity-control{
-<<<<<<< HEAD
     margin-top:5px;
     display:absolute;
     align-items:center;
     border-radius: 1px;
     gap:5px;
-=======
     display:relative;
     top : 10px  ; 
     align-items:center;
     border-radius: 1px;
     gap:12px;
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
     color:#75CD75;
     pointer-events: auto !Important;
     cursor:pointer;
 }
+
+
 
 
 #opacity-slider{
@@ -352,10 +306,7 @@ background : #E5E5E5   ;
     appearance:none;
     width: 70%;
     height:4px;
-<<<<<<< HEAD
     margin-right:10px;
-=======
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
     background:#75CD75;
     border-radius:4px;
     outline:none;
@@ -380,13 +331,10 @@ background : #E5E5E5   ;
     border-radius:50%;
     background:#75CD75;
     border:none;
-<<<<<<< HEAD
     pointer-events: auto !Important;
     cursor:pointer;
-=======
      pointer-events: auto !Important;
         cursor:pointer;
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
 }
 
 #opacity-value{
@@ -400,19 +348,14 @@ font-size:18px;
 }
 
 .overlay-grid{
-<<<<<<< HEAD
-
    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr)); 
     gap: 4px 8px;
     width: 100%; /* S'assure que la grille reste dans les clous */
     box-sizing: border-box;  
-    
-=======
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 4px 8px;
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
 }
 
 .overlay-grid label{
