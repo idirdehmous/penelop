@@ -42,7 +42,7 @@
 
 
 .panel-label {
-margin-top:20px;
+margin-top:5px;
 font-size :16px  ; 
 }
 
@@ -58,7 +58,7 @@ font-size :16px  ;
  /*  background-color: #FFFF00  ; */
    border-radius:5px;
    position:absolute;
-   top:210px;
+   top:160px;
    width:95%;
    left:1%;
    min-height:0;
