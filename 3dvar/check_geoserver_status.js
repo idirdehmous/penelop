@@ -1,6 +1,4 @@
 
-
-
 const GEOSERVER_TIMEOUT = 5000;
 
 async function checkGeoServer() {
@@ -43,15 +41,10 @@ function updateServerStatus(ok){
         text.textContent = "Connected to GeoServer";
     }else{
         status.className = "status error";
-<<<<<<< HEAD
         text.textContent = "Connection failed. Is the GeoServer running ?";
-=======
-        text.textContent = "Failed to establish connection. Is the GeoServer running ?";
->>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
     }
 }
 
 //document.getElementById("current-date").textContent =new Date().toUTCString();
 //updateServerStatus()   ; 
-
 //checkGeoServer() ; 
