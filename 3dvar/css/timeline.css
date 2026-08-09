@@ -1,0 +1,245 @@
+ 
+ :root{
+    --panel-bg: rgba(15,23,42,.95);
+    --text: #FFFFFF;
+    --text-secondary: #64748B;
+    --slider: #E5E5E5;
+}
+ /*TIMELINE*/
+.timeline-container{
+    position:absolute;
+    left:45%;
+    bottom:25px;
+    transform:translateX(-50%);
+    width: 800px;
+    max-width:80vw;
+    padding:8px;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    background:rgba(15,23,42,.1);
+    border-radius:10px;
+    z-index:8000;
+}
+
+
+ /*DATE - TIME */
+.timeline-info{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px  ;
+    margin-top:15px ;
+    }
+    
+.timeline-date,
+.timeline-hour{
+    color:#D5D5D5;
+    font-size:22px;
+    font-weight:400;
+     text-align: justify;
+}
+
+.timeline-hour{
+    font-family:Consolas,"Roboto Mono",monospace;
+}
+
+.timeline-separator{
+    color:#64748B;
+    font-size:18px;
+    font-weight:bold;
+}
+
+
+
+ /*  TOOLBAR*/
+.timeline-toolbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:20px;
+}
+
+.timeline-buttons{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    width:800px;
+    gap:7px;
+    margin-left:10px;
+}
+
+/*   BUTTONS */
+<<<<<<< HEAD
+=======
+/*.time-btn{
+    width:36px;
+    height:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:rgba(255,255,255,.06);
+    color:#FFFFFF;
+    transition:.2s;
+}
+
+.time-btn:hover{
+    background:#FFFFFF;
+    transform:scale(1.1);
+}
+
+.time-btn svg{
+    width:18px;
+    height:18px;
+    display:block;
+}*/
+
+>>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
+/* Aligne button on the timeline */
+.timeline-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* buttons style */
+.time-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #333333; /* svg color */
+  transition: all 0.2s ease;
+}
+
+/* SVG icons  */
+.time-btn svg {
+  width: 30px;
+  height:30px;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+/* hover */
+.time-btn:hover {
+  background-color:#909090;
+  color: #ffffff;
+      transform:scale(1.1); 
+}
+
+
+
+/* TIME AXIS   */
+.time-axis{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    width:100%;
+    height:10px;
+    margin-top:1px;
+}
+
+.time-tick{
+    display:flex;
+    flex-direction:column;
+    transform:translateX(-50%) rotate(-90deg);
+    transform-origin:top center;
+    font-size:24px;
+    font-weight:600;
+    color:#FFFFFF;
+    white-space:nowrap;
+    transform:translateX(-50%);
+    font-size:14px;
+}
+
+
+
+.time-tick.active{
+    color:#38BDF8;
+    font-weight:700;
+}
+
+.time-tick::after{
+    content:"";
+    width:1px;
+    height:8px;
+    margin-top:4px;
+    background:#FFFFFF;
+}
+
+
+/*SLIDER */
+.time-slider{
+    width:100%;
+    height:6px;
+    appearance:none;
+    background:#E5E5E5;
+    border-radius:20px;
+    outline:none;
+    cursor:pointer;
+}
+
+.time-slider::-webkit-slider-runnable-track{
+    height:8px;
+    border-radius:10px;
+}
+
+.time-slider:hover {
+  background-color:#909090;
+}
+.time-slider::-webkit-slider-thumb{
+    appearance:none;
+    width:18px;
+    height:18px;
+    margin-top:-6px;
+    border-radius:50%;
+    border:2px solid #FFFFFF;
+    background:#FFFFFF;
+    transition:transform .1s ease;
+}
+
+.time-slider::-webkit-slider-thumb:hover{
+    transform:scale(1.1);
+}
+
+
+/* TOOLTIP*/
+.time-tooltip{
+    position:fixed;
+    display:none;
+    padding:10px 8px;
+    background:rgba(0,0,0,.2);
+    color:#FFFFFF;
+    font-size:16px;
+    border-radius:4px;
+    pointer-events:none;
+    z-index:3000;
+}
+
+/* Par défaut, on cache l'icône pause */
+/*.time-btn.play .icon-pause {
+    display: none;
+}
+
+/* Quand le bouton est en mode "lecture", on inverse 
+.time-btn.play.is-playing .icon-play {
+    display: none;
+}
+.time-btn.play.is-playing .icon-pause {
+    display: block;
+}
+
+.time-btn.play .icon-pause { display: none; }
+.time-btn.play.playing .icon-play { display: none; }
+.time-btn.play.playing .icon-pause { display: block; }*/

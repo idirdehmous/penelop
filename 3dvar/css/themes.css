@@ -1,0 +1,26 @@
+:root{
+    --bg-base:#0A0E1A;
+    --bg-surface:#0F1525;
+    --bg-panel:#161D30;
+    --text:#FFFFFF;
+    --text-dim:#94A3B8;
+    --accent:#38BDF8;
+    --border:rgba(255,255,255,.08);
+    --radius:10px;
+
+
+
+    --bg-main:#0A101A;
+    --bg-panel:#141C2B;
+    --panel-border:#263445;
+    --text:#E6EDF5;
+    --text-muted:#8EA2B8;
+    --accent:#39C6FF;
+    --success:#21D07A;
+    --warning:#FFB547;
+    
+   --header-height: 70px; /* header 'top: 70px' */
+   --footer-height: 35px; /* footer   */
+  --bg-surface: #242b35; 
+  /*--bg-surface:   #1e293b ;*/
+}	

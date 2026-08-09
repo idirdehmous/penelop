@@ -1,0 +1,317 @@
+/* ==========================================================================
+   1. RESET & VARIABLES (Thème Sombre Moderne Météo)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #1a1e24;
+    --bg-panel: #242b35;
+    --bg-element: #2f3846;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --accent: #3b82f6;
+    --success: #10b981;
+    --border: #374151;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 60px 1px calc(100vh - 90px) 30px; /* Structure globale */
+    grid-template-areas:
+        "header"
+        "gap"
+        "content"
+        "footer";
+}
+
+/* Container principal sous le header (Sidebar + Map) */
+.main-wrapper {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 300px 1px 1fr;
+    height: 100%;
+}
+
+/* ==========================================================================
+   2. HEADER (Topbar)
+   ========================================================================== */
+.topbar {
+    grid-area: header;
+    background-color: var(--bg-panel);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.topbar-left .topbar-logo {
+    height: 35px;
+    width: auto;
+    display: block;
+}
+
+.topbar-center {
+    text-align: center;
+}
+
+.app-title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.app-subtitle {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.topbar-date {
+    font-family: monospace;
+    font-size: 14px;
+    background: var(--bg-element);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Statut GeoServer */
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--success);
+}
+
+/* ==========================================================================
+   3. SIDEBAR (Gestion des couches)
+   ========================================================================== */
+.sidebar {
+    background-color: var(--bg-panel);
+    border-right: 1px solid var(--border);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.sidebar-header label, .panel-label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 5px;
+}
+
+/* Contrôle d'opacité (Slider) */
+.opacity-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--bg-element);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.opacity-control input[type="range"] {
+    flex: 1;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+#opacity-value {
+    font-size: 12px;
+    font-family: monospace;
+    min-width: 40px;
+    text-align: right;
+}
+
+/* Liste des Overlays (Checkboxes) */
+.overlay-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.overlay-list label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: var(--bg-element);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.overlay-list label:hover {
+    background: #384252;
+}
+
+.overlay-checkbox {
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. MAP & TIMELINE (Zone centrale)
+   ========================================================================== */
+#map {
+    position: relative; /* Indispensable pour positionner la timeline par-dessus */
+    background-color: #111418; /* Fond sombre si la carte charge lentement */
+    height: 100%;
+    width: 100%;
+}
+
+/* Conteneur de la Chronologie */
+.timeline-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    max-width: 800px;
+    background-color: rgba(36, 43, 53, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 15px;
+    z-index: 1000; /* Assure la visibilité au-dessus d'OpenLayers/Leaflet */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Toolbar (Boutons de contrôle) */
+.timeline-toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-buttons {
+    display: flex;
+    gap: 8px;
+    background: var(--bg-element);
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.time-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.time-btn:hover {
+    background-color: var(--accent);
+}
+
+.time-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Infos de date de la Timeline */
+.timeline-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.timeline-date {
+    color: var(--text-main);
+}
+
+.timeline-hour {
+    color: var(--accent);
+    font-family: monospace;
+    font-weight: 700;
+}
+
+.timeline-separator {
+    color: var(--text-muted);
+}
+
+/* Slider de temps */
+.time-slider {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+    height: 6px;
+    border-radius: 3px;
+}
+
+/* Info-bulle (Tooltip) au survol du slider */
+.time-tooltip {
+    position: absolute;
+    background: var(--accent);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-family: monospace;
+    display: none;
+    transform: translate(-50%, -35px);
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   5. FOOTER (Bottombar)
+   ========================================================================== */
+.bottombar {
+    grid-area: footer;
+    background-color: var(--bg-panel);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: monospace;
+    z-index: 10;
+}
+
+.bottombar span {
+    color: var(--text-main);
+    font-weight: 600;
+}
