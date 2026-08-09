@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+    font-family:Consolas, monospace;
+}
+
+.header{
+    text-align:center;
+    padding:60px 20px 40px 20px;
+}
+
+.header h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#94a3b8;
+    font-size:18px;
+}
+
+.dashboard{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+   /* grid-template-columns:repeat(auto-fit,minmax(320px,1fr));*/	
+   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap:30px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 4px;
+    border: 1px solid #334155;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: all .25s ease;
+}
+
+.card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    border-color: #3b82f6;
+}
+
+.card-image {
+    margin: 0;
+}
+
+.card-img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;    /* or cover */
+    background: #0f172a;
+    padding:10px;
+}
+
+.card-image figcaption {
+    padding: 18px 25px 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #60a5fa;
+}
+
+.card p {
+    padding: 0 25px 25px;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.footer{
+    text-align:center;
+    margin-top:50px;
+    padding:30px;
+/*    color:#64748b;*/
+color:#FFFFFF;
+
+
+}
