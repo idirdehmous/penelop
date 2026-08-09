@@ -1,0 +1,69 @@
+.calendar-container { 
+position:fixed ; 
+top:var(--header-height); 
+margin-top:0px;
+right:0%;
+z-index:7001;
+width:330px;
+/*right:5px;*/
+/*background-color:  rgba(16, 15, 16, 0.0);*/
+ background-color: var(--bg-surface, #FFFFFF);
+ box-sizing: border-box;
+ padding-bottom: 0px;    /*  no padding from botom  */
+ display: flex;
+}
+
+#calendar-panel{
+<<<<<<< HEAD
+    position:absolute  !Important;
+    top:0px            !Important;
+    right:0px          !Important;
+    right: 0%;
+    width:  320px      !Important;
+    /*height: 110px   !Important;*/
+    /*top: 210px;*/
+    /*height: calc(20vh - 210px); */
+    /*height:10vh  ; */
+=======
+    position:fixed  !Important;
+    top:0px;           !Important;
+    right:0px       !Important;
+    left: 82%;
+    width:  320px   !Important;
+    /*height: 110px   !Important;*/
+    top: 210px;
+    height: calc(20vh - 210px); 
+>>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
+    background:var(--bg-surface) !Important;
+    z-index:2001 !Important;
+    border-right: 1px solid var(--border) !Important;
+}
+
+.flatpickr-calendar{
+    width: 300px !Important;
+    background:#FFFFFF !Important;
+    border: #00E288 !Important;
+    background-color:  rgba(16, 15, 16, 0.0);			
+    box-shadow:none ;
+      font-family:
+        "Roboto Mono",
+        Consolas,
+        monospace;
+}
+
+.flatpickr-day.selected{
+    /*background:#00E288 ;*/
+    background :#84B36A  !Important;
+    border-color:#FFFFFF;
+}
+
+.hour-selector{
+    margin-top:15px;
+    /*background : white !Important; */
+}
+
+#hour-select {
+background: white !Important;
+color : black  ; 
+border-radius : 0px; 
+}

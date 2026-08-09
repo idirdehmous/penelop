@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BEHRA</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"      href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap"  rel="stylesheet">
+    
+    
+    
+    <!-- Leaflet style -->
+    <link rel="stylesheet"  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Styles -->
+    <!--<link rel="stylesheet" href="wcs_map_GL.css">   -->
+    <link rel="stylesheet" href="css/themes.css"> 
+    <link rel="stylesheet" href="css/layout.css"> 
+    <link rel="stylesheet" href="css/sidebar.css"> 
+    <link rel="stylesheet" href="css/calendar.css">  
+    <link rel="stylesheet" href="css/leaflet.css"> 
+    <link rel="stylesheet" href="css/header.css"> 
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Calendar plugin  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    
+</head>
+<body>
+
+
+<body>
+
+
+<body>
+	
+	<!-- Spinner div -->
+    <div id="loading-overlay">
+    <div class="spinner"></div>
+    <div class="loading-text">
+        Loading BEHRA datasets ...
+    </div>
+    </div>
+
+
+    <!-- Display the status of running App   -->
+<header class="topbar">
+    <!-- Logo -->
+   <!-- <div class="topbar-left">
+        <img src="img/logo.png" alt="PENELOP" class="topbar-logo">
+    </div>-->
+    <!-- Application -->
+    <div class="topbar-center">
+        <div class="app-subtitle">ALARO 1.3 km REANALYSIS</div>
+    </div>
+    <!-- Current UTC time -->
+    <!--<div class="topbar-date"> <span id="current-date"></span> </div>-->
+    
+    <!-- GeoServer status -->
+    <div class="topbar-status">
+        <span id="server-status" class="status success">
+            <span class="status-dot"></span>
+            <span id="server-status-text">
+                Connected to GeoServer
+            </span>
+        </span>
+    </div>
+</header>
+    
+
+
+
+
+
+<!-- Display the status of running App   -->
+<header class="topbar">
+    <!-- Logo -->
+   <!-- <div class="topbar-left">
+        <img src="img/logo.png" alt="PENELOP" class="topbar-logo">
+    </div>-->
+    <!-- Application -->
+    <div class="topbar-center">
+        <div class="app-subtitle">ALARO 1.3Km reanalysis</div>
+    </div>
+    <!-- Current UTC time -->
+    <!--<div class="topbar-date"> <span id="current-date"></span> </div>-->
+    
+    <!-- GeoServer status -->
+    <div class="topbar-status">
+        <span id="server-status" class="status success">
+            <span class="status-dot"></span>
+            <span id="server-status-text">
+                Connected to GeoServer
+            </span>
+        </span>
+    </div>
+</header>
+    
+    
+
+
+
+    <!-- MAP -->
+    <main id="map"></main>
+
+
+
+<<<<<<< HEAD
+		<!-- DATE & TIME PANEL -->
+<div class="calendar-container">
+    <div id="calendar-panel">
+        <div class="datetime-container">
+            <div class="datetime-title" style="font-size:16px;">
+                DATE 
+            </div>
+            <div class="calendar-wrapper">
+                <input id="calendar-picker" type="text">
+            </div>
+            <div class="hour-selector">
+                <label for="hour-select" style="font-size:16px;">
+                    HOUR 
+                </label>
+                <select id="hour-select"></select>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- LAYERS SIDEBAR -->
+<aside class="sidebar">		
+    <div id="display-panel" class="panel">			
+=======
+    <!-- LAYERS SIDEBAR -->
+<aside class="sidebar"   id="sidebar-container">	
+    <div id="display-panel" class="panel">			
+		
+
+	
+	
+>>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
+        <div class="panel-title">
+            <!--Display-->
+        </div>                
+        <div class="panel-body">
+            <!-- Opacity -->
+            <label class="panel-label"  style="font-size:16px ;">
+                LAYER OPACITY
+            </label>
+            <div class="opacity-control">
+                <input id="opacity-slider"
+                       type="range"  min="0" max="100" value="100">
+                <span id="opacity-value">  100% </span>
+            </div>
+
+            <!-- Overlay -->
+<label class="panel-label" style="margin-top:10px;">
+    OVERLAY
+</label>
+
+<div class="overlay-list">
+    <!--<label><input type="checkbox" id="overlay-mslp"    class="overlay-checkbox"> MSLP</label>
+    <label><input type="checkbox" id="overlay-regions"  class="overlay-checkbox" style="font-size:18px ; "> Regions</label>
+    <label><input type="checkbox" id="overlay-stations" class="overlay-checkbox" style="font-size:18px ; "> Stations</label> 
+    <!--<label><input type="checkbox" id="overlay-rivers"  class="overlay-checkbox"> Rivers</label>-->
+    <div class="overlay-list">
+    <!--<label><input type="checkbox" id="overlay-mslp"    class="overlay-checkbox"> MSLP</label>-->
+    <label style="font-size:14px;color:#FFFFFF !Important; font-style: bold !Important"><input type="checkbox" id="overlay-regions"  class="overlay-checkbox" style="font-size:18px ; "> Regions</label>
+    <label style="font-size:14px;color:#FFFFFF !Important; font-style: bold !Important"><input type="checkbox" id="overlay-rmi_stat" class="overlay-checkbox" style="font-size:18px ; "> RMI_AWS stations</label>
+</div>
+</div>
+
+
+<<<<<<< HEAD
+=======
+	<!-- DATE & TIME PANEL -->
+    <div id="calendar-panel">
+        <div class="datetime-container">
+            <div class="datetime-title" style="font-size:16px;">
+                DATE 
+            </div>
+            <div class="calendar-wrapper">
+                <input id="calendar-picker" type="text">
+            </div>
+            <div class="hour-selector">
+                <label for="hour-select" style="font-size:16px;">
+                    HOUR 
+                </label>
+                <select id="hour-select"></select>
+            </div>
+        </div>
+    </div>
+>>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
+
+    <div class="sidebar-tools"  id="layers-container">
+        <nav id="menu-container" id="layers_menu"></nav>
+    </div>
+
+</aside>
+
+    
+    
+</body>
+
+
+    <!-- Online plugins  
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/geotiff/dist-browser/geotiff.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-canvaslayer-field@1.4.1/dist/leaflet.canvaslayer.field.js"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js"></script>
+    <script src="https://unpkg.com/leaflet-pixi-overlay/L.PixiOverlay.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>-->
+   
+    <script src="../plugins/leaflet.js"></script>
+    <script src="../plugins/d3.v7.min.js"></script>
+    <script src="../plugins/geotiff.min.js"></script>
+    <script src="../plugins/chroma.min.js"></script>
+    <script src="../plugins/leaflet.canvaslayer.field.js"></script>
+    <script src="../plugins/georaster-layer-for-leaflet.min.js"></script>    
+    <script src="../plugins/pixi.min.js"></script> 
+    <script src="../plugins/L.PixiOverlay.min.js"></script> 
+    <script src="../plugins/jquery-3.7.1.min.js"></script> 
+
+
+   <script src="config.js"></script>
+   <script src="check_geoserver_status.js"></script>
+   <script src="load_layers_behra.js"></script>
+   <script src="datetime.js"></script>
+   <script src="main.js"></script>
+   <script>
+        lucide.createIcons();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<<<<<<< HEAD
+.topbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 70px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #008000;
+    background-color: var(--bg-surface, #FFFFFF); 
+    color: white;
+    z-index: 5000;
+}
+
+.app-subtitle {
+    font-size: 16px; 
+}
+
+/* global title */
+.topbar-center .app-subtitle {
+    font-size: 18px;         
+    font-weight: 600;         
+    letter-spacing: 0.5px;    
+}
+
+/* date */
+.topbar-date {
+    font-size: 16px;         
+    font-weight: 500;
+}
+
+/* texte size - Note: Gardez 14px ou 16px selon la page, Flexbox gérera l'alignement */
+#server-status-text {
+    font-size: 16px; /* Mettez 14px sur l'autre feuille CSS si nécessaire */        
+    font-weight: 500;
+    white-space: nowrap; /* Changé de pre-line à nowrap pour garantir la ligne unique */
+}
+
+/* CORRECTIF CRUCIAL : Appliqué au conteneur parent pour forcer l'alignement */
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+/* Green and red dots */
+.status-dot {
+    width: 12px;            
+    height: 12px;            
+    border-radius: 50%;
+    flex-shrink: 0; /* Empêche l'écrasement du point */
+    margin-right: 8px; /* Espacement propre */
+    background: currentColor;
+    
+    /* Utilisation de marges négatives pour un centrage parfait et dynamique */
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.status.success .status-dot {
+    background: #22C55E;
+    box-shadow: 0 0 1px #22C55E;
+}
+
+.status.error .status-dot {
+    background: #FF0000;
+    box-shadow: 0 0 1px #FF0000;
+}
+
+/* Marge à droite de la topbar (150px pour l'une, 80px pour l'autre) */
+.topbar-status {
+    margin-right: 150px; 
+}
+=======
+.topbar{
+   position:fixed;
+    inset:0 0 auto 0;
+    /*height:var(--header-height);   /*  header-height is a variable in   themes.css */
+    height: 70px; 
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    background:#008000;
+    background-color: var(--bg-surface, #FFFFFF); 
+    color:white;
+    z-index:5000;
+}
+
+.app-subtitle {
+font-size: 16px  ; 
+}
+
+
+
+/* 1. Taille globale de la sous-titre de l'application */
+.topbar-center .app-subtitle {
+    font-size: 18px;          /* Augmenté (était à ~11px/14px) */
+    font-weight: 600;         /* Rend le texte un peu plus épais et lisible */
+    letter-spacing: 0.5px;    /* Espace légèrement les lettres */
+}
+
+/* 2. Taille de la date UTC actuelle */
+.topbar-date {
+    font-size: 16px;          /* Augmenté (était à 14px) */
+    font-weight: 500;
+}
+
+/* 3. Taille du texte de statut GeoServer */
+#server-status-text {
+    font-size: 14px;          /* Augmenté (était à 12px) */
+    font-weight: 500;
+}
+
+/* 4. Ajustement optionnel du point vert (pour suivre la taille du texte) */
+.status-dot {
+    width: 12px;              /* Légèrement plus grand (était à 8px) */
+    height: 12px;             /* Légèrement plus grand (était à 8px) */
+    border-radius:50%;
+    display:inline-block;
+    margin-right:8px;
+    background:currentColor;
+}
+
+
+.status.success .status-dot{
+    background:#22C55E;
+    box-shadow:0 0 1px #22C55E;
+}
+
+.status.error .status-dot{
+    background:#FF0000;
+    box-shadow:0 0 1px #FF0000;
+}
+
+.topbar-status {
+    margin-right: 80px; /* Ajustez cette valeur (ex: 60px, 100px) pour le pousser plus ou moins vers la gauche */
+}
+
+#server-status-text {
+    white-space: pre-line;
+}
+
+/*.status.error .status-dot{
+    animation:blink 1.2s infinite;
+
+}
+
+@keyframes blink{
+    0%   { opacity:1;   }
+    50%  { opacity:.25; }
+    100% { opacity:1;   }
+
+}*/
+
+>>>>>>> 706e6d29761192dc938cad0c18fd1d3014eb7dca
